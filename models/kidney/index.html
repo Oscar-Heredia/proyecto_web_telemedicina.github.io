@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+<!-- Top-Navigation -->
+<div class="nav">
+  <div class="inicio">
+      <a href="/index.html#home">
+          <div class="logo">
+              Weroskis basati sull'esperienza interattiva
+          </div>
+      </a>
+      <div class="menu">
+          <a href="/index.html">
+              <div class="menu-item">
+                  Home
+              </div>
+          </a>
+          <a href="/index.html#about">
+              <div class="menu-item">
+                  About
+              </div>
+          </a>
+          <a href="/index.html#inicio-menu">
+              <div class="menu-item">
+                  Temas
+              </div>
+          </a>
+          <a href="/index.html#testimonials">
+              <div class="menu-item">
+                  Testimonials
+              </div>
+          </a>
+      </div>
+      <div class="right-menu">
+          <div class="cart-btn">
+              <i class='bx bxs-cart'></i>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- End Top-Navigation -->
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="kidney.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>
+    <img src="qr.jpg" class="qr">  
+    <script src="script.js"></script>
+    <!--BACK TO MAIN BTN-->
+    <a href="/index.html">
+      <img src="/imagenes/back-img.png" class="back-button">
+    </a>
+    <!--END BACK TO MAIN BTN-->
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+  </body>
+</html>
