@@ -5,67 +5,87 @@
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
   </head>
   <body>
-<!-- Top-Navigation -->
-<div class="nav">
-  <div class="inicio">
-      <a href="/index.html#home">
-          <div class="logo">
-              Weroskis basati sull'esperienza interattiva
-          </div>
-      </a>
-      <div class="menu">
-          <a href="/index.html">
-              <div class="menu-item">
-                  Home
+    <!-- <model-viewer> HTML element -->
+    <div class="nav">
+        <div class="inicio">
+            <div class="logo">
+                <p>Partes principales del cerebro</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="fullheight align-items-center" id="about">
+      <div class="container">
+          <div class="row">
+              <div class="col-7 col-xs-12"> <!-- Cambia col-7 h-xs por col-7 col-xs-12 -->
+                <model-viewer src="brain.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+                  <button class="Hotspot" slot="hotspot-4" data-position="-122.32578413471988m -76.28532569660463m -67.58102216824172m" data-normal="0.08943216334775778m -0.13561394181237252m -0.9867171565068941m" data-visibility-attribute="visible">
+                      <div class="HotspotAnnotation">Cerebelo</div>
+                  </button><button class="Hotspot" slot="hotspot-5" data-position="-119.98831343117921m -203.37568939606413m 5.524359292496385m" data-normal="0.28847841332393814m -0.2532256653284055m 0.9233942643665757m" data-visibility-attribute="visible">
+                      <div class="HotspotAnnotation">Médula espinal</div>
+                  </button><button class="Hotspot" slot="hotspot-7" data-position="-160.53915759744228m 12.840015808904521m 234.7633146925777m" data-normal="-0.8472395010371854m 0.1441437943924186m 0.511280543753053m" data-visibility-attribute="visible">
+                      <div class="HotspotAnnotation">Lóbulo frontal</div>
+                  </button><button class="Hotspot" slot="hotspot-8" data-position="-139.70023476745763m 7.9294823904576965m -99.05578178792476m" data-normal="-0.22915116090700668m -0.018087505005481345m -0.9732227841648838m" data-visibility-attribute="visible">
+                      <div class="HotspotAnnotation">Lóbulo occipital</div>
+                  </button><button class="Hotspot" slot="hotspot-10" data-position="-82.01532416177369m 115.61412343142767m 5.550553033540311m" data-normal="0.327461175497851m 0.9057005094536934m -0.2692132346614596m" data-visibility-attribute="visible">
+                      <div class="HotspotAnnotation">Lóbulo parietal</div>
+                  </button><button class="Hotspot" slot="hotspot-11" data-position="-32.210435157223756m -42.77593934278709m 131.20373341671552m" data-normal="0.7143878006218758m 0.47555538982935164m 0.5133197264151191m" data-visibility-attribute="visible">
+                      <div class="HotspotAnnotation">Lóbulo temporal</div>
+                  </button><button class="Hotspot" slot="hotspot-12" data-position="-120.28245339848678m -112.31988179878785m 48.39106671872053m" data-normal="-0.1526897780820491m -0.6500281264656737m 0.7444120273563432m" data-visibility-attribute="visible">
+                      <div class="HotspotAnnotation">Bulbo raquídeo</div>
+                  </button>
+                  <button slot="ar-button" id="ar-button">
+                      View in your space
+                  </button>
+                  <div id="ar-prompt">
+                      <img src="ar_hand_prompt.png">
+                  </div>
+                </model-viewer>  
+                <img src="QR_brain1.png">
+            </div>
+
+              <div class="col-5 col-xs-12 align-items-center">
+                  <div class="about-slogan">
+                    <h4>Lóbulo frontal -> Detras de la frente</h4>
+                        <p>Tiene la responsabilidad de planifica, percibir, coordinar, controlar, razonar, ejecutar conductas y omitir juicios.<br>
+                        El lóbulo frontal izquierdo es el encargado de transformar lo que pensamos en palabras, y el derecho, se encarga de las funciones motoras y de la memoria.</p>
+                    <h4>Lóbulo parietal -> Parte superior detrás del lóbulo frontal</h4>
+                        <p>Controla las percepciones de los sentidos, el dolor y el tacto.<br>
+                        Ayuda al entendimiento de las señales auditivas y de tránsito gracias a que las conecta con la memoria.</p>
+                    <h5>Lóbulo izquierdo</h5>
+                        <p>Se encarga de la comprensión del lenguaje escrito, el habla y de realizar cálculos matemáticos.</p>
+                    <h5>Lóbulo derecho</h5>
+                        <p>Se encarga de las funciones motoras del cuerpo.</p>
+                    <h4>Lóbulo temporal -> Debajo del lóbulo parietal y detrás del lóbulo frontal</h4>
+                        <p>Regula la audición y el olfato (parte cercana al hipocampo).</p>
+                        <h5>Lóbulo temporal dominante</h5> 
+                        <p>Encargado del recuerdo de palabras, objetos y nombres.</p>
+                        <h5>Lóbulo temporal no dominante</h5>
+                        <p>Reconoce sonidos y está relacionado con la memoria no visual.</p>
+                    <h4>Lóbulo occipital -> Parte inferior y posterior de la cabeza</h4>
+                        <p>Actúa básicamente en la visión, formas y el movimiento.</p>
+                    <h4>Bulbo Raquídeo</h4>
+                        <p>Controla actos reflejo, que son funciones automaticas como la respiración, frecuencia cardiaca, presión arterial, deglución, digestión y parpadeo</p>
+                    <h4>Cerebelo</h4>
+                        <p>Regula las posturas, el balance del cuerpo y el movimiento.</p>
+                    <h4>Medula Espinal</h4>
+                        <p>Conecta al cerebro con los nervios que llegan al resto del cuerpo</p>
+                  </div>
               </div>
-          </a>
-          <a href="/index.html#about">
-              <div class="menu-item">
-                  About
-              </div>
-          </a>
-          <a href="/index.html#inicio-menu">
-              <div class="menu-item">
-                  Temas
-              </div>
-          </a>
-          <a href="/index.html#testimonials">
-              <div class="menu-item">
-                  Testimonials
-              </div>
-          </a>
-      </div>
-      <div class="right-menu">
-          <div class="cart-btn">
-              <i class='bx bxs-cart'></i>
           </div>
       </div>
   </div>
-</div>
-<!-- End Top-Navigation -->
-    <!-- <model-viewer> HTML element -->
-    <model-viewer src="brain.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
-      <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
-      </div>
-      <button slot="ar-button" id="ar-button">
-          View in your space
-      </button>
-      <div id="ar-prompt">
-          <img src="ar_hand_prompt.png">
-      </div>
-    </model-viewer>
-    <img src="qr.jpg" class="qr">
+  
     <script src="script.js"></script>
-    <!--BACK TO MAIN BTN-->
-    <a href="/index.html">
-      <img src="/imagenes/back-img.png" class="back-button">
-    </a>
-    <!--END BACK TO MAIN BTN-->
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
   </body>
