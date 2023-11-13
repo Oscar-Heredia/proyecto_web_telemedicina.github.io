@@ -5,50 +5,39 @@
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
   </head>
   <body>
-<!-- Top-Navigation -->
-<div class="nav">
-  <div class="inicio">
-      <a href="/index.html#home">
-          <div class="logo">
-              Weroskis basati sull'esperienza interattiva
-          </div>
-      </a>
-      <div class="menu">
-          <a href="/index.html">
-              <div class="menu-item">
-                  Home
-              </div>
-          </a>
-          <a href="/index.html#about">
-              <div class="menu-item">
-                  About
-              </div>
-          </a>
-          <a href="/index.html#inicio-menu">
-              <div class="menu-item">
-                  Temas
-              </div>
-          </a>
-          <a href="/index.html#testimonials">
-              <div class="menu-item">
-                  Testimonials
-              </div>
-          </a>
-      </div>
-      <div class="right-menu">
-          <div class="cart-btn">
-              <i class='bx bxs-cart'></i>
-          </div>
-      </div>
-  </div>
-</div>
-<!-- End Top-Navigation -->
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="duodenum_pancreas_spleen.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+    <div class="nav">
+        <div class="inicio">
+            <div class="logo">
+                <p>Partes principales del páncreas</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="fullheight align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-7 col-xs-12"> <!-- Cambia col-7 h-xs por col-7 col-xs-12 -->
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="pancreas.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+      <button class="Hotspot" slot="hotspot-1" data-position="-0.4904968830484761m 1.3175581538811103m -2.734997059514563m" data-normal="-0.9305529579037136m -0.364359563781816m -0.03623949250989004m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Cabeza</div>
+      </button><button class="Hotspot" slot="hotspot-2" data-position="-0.5133336277908995m 1.1156137705916354m -0.04685440790436368m" data-normal="-0.9215319445044096m -0.38784897758664766m -0.018762884717285825m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Conducto Pancreático</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="0.2708815123593793m 1.8966273651774506m -0.8113901432386353m" data-normal="0.6750754361724696m 0.28439298727964385m 0.6807303315283597m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Lóbulo</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="-0.6179650060452976m 1.7153732125635284m 2.249191925369162m" data-normal="-0.9745506915292059m -0.1983947498265087m -0.10435742849085286m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Cola</div>
+      </button>
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -58,14 +47,28 @@
       <div id="ar-prompt">
           <img src="ar_hand_prompt.png">
       </div>
-    </model-viewer>
-    <img src="qr.jpg" class="qr">
+    </model-viewer>  
+    <img src="qr.png">    
+  </div>  
+  <div class="col-5 col-xs-12 align-items-center">
+    <div class="about-slogan">
+      <h4>Cabeza</h4>
+          <p>La función de la cabeza del páncreas está principalmente relacionada con la producción y liberación de enzimas digestivas y hormonas que desempeñan un papel crucial en la digestión y el control del azúcar en la sangre.<br>
+      <h4>Conducto Pancreático</h4>
+          <p>El conducto pancreático tiene como función transportar enzimas pancreáticas y bicarbonato de sodio desde el páncreas hasta el duodeno, la primera parte del intestino delgado.<br>
+          <p>Estas secreciones pancreáticas desempeñan un papel crucial en la digestión de los alimentos.<br>
+      <h4>Lóbulo</h4>
+          <p>Entre estas estructuras lobulillares, se encuentran repartidos grupos especiales de células llamadas “islotes de Langerhans”. Constituyen, aproximadamente, un 5 por ciento del total de células del páncreas, y su función es la síntesis de hormonas como insulina, glucagón, y somatostatina.<br>
+      <h4>Cola</h4>
+          <p>Esta parte del páncreas está más cerca del bazo y juega un papel importante en la producción de insulina y glucagón, dos hormonas clave en la regulación del azúcar en la sangre.<br>
+          <p>Las células beta de los islotes de Langerhans en el lóbulo de la cola secretan insulina, que reduce los niveles de glucosa en la sangre, mientras que las células alfa secretan glucagón, que aumenta los niveles de glucosa.</p>
+     </div>
+</div>
+</div>
+</div>
+</div>
+
     <script src="script.js"></script>
-    <!--BACK TO MAIN BTN-->
-    <a href="/index.html">
-      <img src="/imagenes/back-img.png" class="back-button">
-    </a>
-    <!--END BACK TO MAIN BTN-->
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
   </body>

@@ -5,50 +5,43 @@
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
   </head>
   <body>
-<!-- Top-Navigation -->
-<div class="nav">
-  <div class="inicio">
-      <a href="/index.html#home">
-          <div class="logo">
-              Weroskis basati sull'esperienza interattiva
-          </div>
-      </a>
-      <div class="menu">
-          <a href="/index.html">
-              <div class="menu-item">
-                  Home
-              </div>
-          </a>
-          <a href="/index.html#about">
-              <div class="menu-item">
-                  About
-              </div>
-          </a>
-          <a href="/index.html#inicio-menu">
-              <div class="menu-item">
-                  Temas
-              </div>
-          </a>
-          <a href="/index.html#testimonials">
-              <div class="menu-item">
-                  Testimonials
-              </div>
-          </a>
-      </div>
-      <div class="right-menu">
-          <div class="cart-btn">
-              <i class='bx bxs-cart'></i>
-          </div>
-      </div>
-  </div>
-</div>
-<!-- End Top-Navigation -->
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="realistic_human_lungs.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+    <div class="nav">
+        <div class="inicio">
+            <div class="logo">
+                <p>Partes principales de los pulmones</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="fullheight align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-7 col-xs-12"> <!-- Cambia col-7 h-xs por col-7 col-xs-12 -->
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="realistic_human_lungs.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+      <button class="Hotspot" slot="hotspot-1" data-position="0.016004668467720518m 0.26732980287995994m -0.036781607649171426m" data-normal="0.10267530265162449m 0.8311815063349509m 0.5464385470957911m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Faringe</div>
+      </button><button class="Hotspot" slot="hotspot-2" data-position="0.0009185229439372718m 0.22109481240613418m -0.02627207597400503m" data-normal="-0.4169144846345015m -0.1098982062849049m 0.9022775054035808m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Laringe</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="0.0008634581335733866m 0.17169511041948476m -0.03706129623744862m" data-normal="-0.14166777631529376m -0.1795020539162874m 0.9735035972166277m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Traquea</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="0.0807547098816991m 0.09199238218427144m -0.0012393751365602848m" data-normal="0.3513187650755863m 0.33197585210550057m 0.8754239880906804m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Pulmón Izquierdo</div>
+      </button><button class="Hotspot" slot="hotspot-5" data-position="-0.058725974675095646m 0.08528650040743903m 0.006305045713825389m" data-normal="-0.08201381522489327m 0.3087763181584435m 0.9475921693728652m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Pulmón Derecho</div>
+      </button><button class="Hotspot" slot="hotspot-6" data-position="0.04530906832898421m 0.08358366329957713m -0.06418091622064773m" data-normal="-0.8851479549344299m -0.3197754472649217m 0.3380188769904958m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Bronquios</div>
+      </button>
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -58,14 +51,30 @@
       <div id="ar-prompt">
           <img src="ar_hand_prompt.png">
       </div>
-    </model-viewer>
-    <img src="qr.jpg" class="qr">
+    </model-viewer>  
+    <img src="qr.png">    
+  </div>  
+  <div class="col-5 col-xs-12 align-items-center">
+    <div class="about-slogan">
+      <h4>Faringe</h4>
+          <p>Su función principal está relacionada con la deglución y la conducción del aire hacia la tráquea durante la respiración.<br>
+      <h4>Laringe</h4>
+          <p>Su función principal es permitir el paso del aire desde la faringe hacia la tráquea y los pulmones, y al mismo tiempo, proteger las vías respiratorias durante la deglución para evitar que los alimentos o líquidos ingresen a los pulmones.<br>
+      <h4>Traquea</h4>
+          <p>Su función principal es permitir el paso del aire desde la laringe hacia los bronquios y, finalmente, hacia los pulmones.<br>
+      <h4>Pulmones</h4>
+          <p>Facilitan el intercambio de gases entre el cuerpo y el ambiente.</p>
+      <h4>Bronquios</h4>
+          <p>Los bronquios transportan el aire desde la tráquea hasta los pulmones. A medida que los bronquios se ramifican, se hacen más pequeños y forman estructuras llamadas bronquios más pequeños y bronquiolos.<br>
+          <p>A medida que el aire se desplaza a través de los bronquios, se filtra y se humedece. Los bronquios están revestidos con células que secretan moco y tienen cilios diminutos. Los cilios ayudan a mover el moco hacia arriba y fuera de los pulmones, atrapando partículas extrañas y ayudando en la limpieza del sistema respiratorio.<br>
+          <p>A medida que los bronquios se ramifican en bronquiolos y luego en alvéolos, se produce el intercambio de gases. Los alvéolos son pequeñas bolsas de aire en los pulmones donde tiene lugar la transferencia de oxígeno desde el aire inhalado a la sangre y la eliminación de dióxido de carbono de la sangre al aire exhalado.<br>
+      </div>
+</div>
+</div>
+</div>
+</div>
+
     <script src="script.js"></script>
-    <!--BACK TO MAIN BTN-->
-    <a href="/index.html">
-      <img src="/imagenes/back-img.png" class="back-button">
-    </a>
-    <!--END BACK TO MAIN BTN-->
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
   </body>

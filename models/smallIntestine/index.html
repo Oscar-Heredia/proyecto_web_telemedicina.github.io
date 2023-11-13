@@ -5,50 +5,37 @@
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
   </head>
   <body>
-<!-- Top-Navigation -->
-<div class="nav">
-  <div class="inicio">
-      <a href="/index.html#home">
-          <div class="logo">
-              Weroskis basati sull'esperienza interattiva
-          </div>
-      </a>
-      <div class="menu">
-          <a href="/index.html">
-              <div class="menu-item">
-                  Home
-              </div>
-          </a>
-          <a href="/index.html#about">
-              <div class="menu-item">
-                  About
-              </div>
-          </a>
-          <a href="/index.html#inicio-menu">
-              <div class="menu-item">
-                  Temas
-              </div>
-          </a>
-          <a href="/index.html#testimonials">
-              <div class="menu-item">
-                  Testimonials
-              </div>
-          </a>
-      </div>
-      <div class="right-menu">
-          <div class="cart-btn">
-              <i class='bx bxs-cart'></i>
-          </div>
-      </div>
-  </div>
-</div>
-<!-- End Top-Navigation -->
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="talking_about_intestines.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+    <div class="nav">
+        <div class="inicio">
+            <div class="logo">
+                <p>Partes principales del intestino delgado</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="fullheight align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-7 col-xs-12"> <!-- Cambia col-7 h-xs por col-7 col-xs-12 -->
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="talking_about_intestines.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+      <button class="Hotspot" slot="hotspot-1" data-position="23.32965311384323m -40.81510351909674m 908.4615102584585m" data-normal="-0.3880636412492107m -0.06339256262491286m 0.9194498318800489m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Duodeno</div>
+      </button><button class="Hotspot" slot="hotspot-2" data-position="32.492309091048924m -145.32543067296m 937.5958341292935m" data-normal="-0.3744118986739339m -0.6701482418327138m 0.6408721121252682m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Yeyuno</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="-37.19438961513681m -181.82574221109553m 939.0505378428306m" data-normal="-0.44149170014801775m -0.1635928377551369m 0.8822258566464907m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Íleon</div>
+      </button>
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -58,14 +45,26 @@
       <div id="ar-prompt">
           <img src="ar_hand_prompt.png">
       </div>
-    </model-viewer>
-    <img src="qr.jpg" class="qr">  
+    </model-viewer>  
+    <img src="qr.png">    
+  </div>  
+  <div class="col-5 col-xs-12 align-items-center">
+    <div class="about-slogan">
+      <h4>Duodeno</h4>
+          <p>Es la primera parte del intestino delgado y desempeña un papel crucial en la digestión.<br>
+          <p>El duodeno ayuda a seguir digiriendo los alimentos que vienen del estómago. Absorbe nutrientes (vitaminas, minerales, carbohidratos, grasas, proteínas) y agua de los alimentos para que el cuerpo los pueda utilizar.<br>
+      <h4>Yeyuno</h4>
+          <p>El yeyuno ayuda a continuar la digestión de los alimentos que vienen del estómago. Absorbe nutrientes (vitaminas, minerales, carbohidratos, grasas, proteínas) y agua de los alimentos para que el cuerpo los pueda usar.<br>
+      <h4>Íleon</h4>
+          <p>Última parte del intestino delgado. Se conecta con el ciego (primera parte del intestino grueso).<br>
+          <p>El íleon ayuda a continuar la digestión de los alimentos que vienen del estómago y otras partes del intestino delgado. Absorbe nutrientes (vitaminas, minerales, carbohidratos, grasas, proteínas) y agua de los alimentos para que el cuerpo los pueda usar.</p>
+      </div>
+</div>
+</div>
+</div>
+</div>
+
     <script src="script.js"></script>
-    <!--BACK TO MAIN BTN-->
-    <a href="/index.html">
-      <img src="/imagenes/back-img.png" class="back-button">
-    </a>
-    <!--END BACK TO MAIN BTN-->
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
   </body>

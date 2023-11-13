@@ -1,4 +1,15 @@
-<model-viewer src="liver.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+<model-viewer src="liver.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+    <button class="Hotspot" slot="hotspot-1" data-position="-21.29399087779447m -29.57829104567935m 2.7697090955467942m" data-normal="0.38789511970948276m 0.9024755872651662m 0.18728371657984458m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Cara Diafragmática del Lóbulo Derecho</div>
+    </button><button class="Hotspot" slot="hotspot-2" data-position="24.96141643703355m -51.478548107928155m -17.2028245877835m" data-normal="0.5595135463352957m 0.8202098350485674m -0.11916550657343288m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Cara Diafragmática del Lóbulo Izquierdo</div>
+    </button><button class="Hotspot" slot="hotspot-3" data-position="-10.032156003251416m -68.80499299792308m 27.26706779134237m" data-normal="0.41600530549654835m -0.49280855948787655m 0.7642508158282906m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Vesícula Biliar</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="-12.304834372401864m -70.04564259014568m -30.81450738430901m" data-normal="-0.4785946968918419m -0.8273317048169464m -0.29405673995283776m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Vena Cava Inferior</div>
+    </button><button class="Hotspot" slot="hotspot-5" data-position="7.940957681592526m -41.93762856097371m -11.889714828037164m" data-normal="0.44089847708248303m 0.8969755486832502m 0.03230167133028039m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Ligamento Coronario</div>
+    </button>
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
     </div>

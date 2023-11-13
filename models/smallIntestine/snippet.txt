@@ -1,4 +1,11 @@
-<model-viewer src="talking_about_intestines.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+<model-viewer src="talking_about_intestines.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+    <button class="Hotspot" slot="hotspot-1" data-position="23.32965311384323m -40.81510351909674m 908.4615102584585m" data-normal="-0.3880636412492107m -0.06339256262491286m 0.9194498318800489m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Duodeno</div>
+    </button><button class="Hotspot" slot="hotspot-2" data-position="32.492309091048924m -145.32543067296m 937.5958341292935m" data-normal="-0.3744118986739339m -0.6701482418327138m 0.6408721121252682m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Yeyuno</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="-37.19438961513681m -181.82574221109553m 939.0505378428306m" data-normal="-0.44149170014801775m -0.1635928377551369m 0.8822258566464907m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Íleon</div>
+    </button>
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
     </div>

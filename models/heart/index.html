@@ -5,50 +5,50 @@
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
   </head>
   <body>
-<!-- Top-Navigation -->
-<div class="nav">
-  <div class="inicio">
-      <a href="/index.html#home">
-          <div class="logo">
-              Weroskis basati sull'esperienza interattiva
-          </div>
-      </a>
-      <div class="menu">
-          <a href="/index.html">
-              <div class="menu-item">
-                  Home
-              </div>
-          </a>
-          <a href="/index.html#about">
-              <div class="menu-item">
-                  About
-              </div>
-          </a>
-          <a href="/index.html#inicio-menu">
-              <div class="menu-item">
-                  Temas
-              </div>
-          </a>
-          <a href="/index.html#testimonials">
-              <div class="menu-item">
-                  Testimonials
-              </div>
-          </a>
-      </div>
-      <div class="right-menu">
-          <div class="cart-btn">
-              <i class='bx bxs-cart'></i>
-          </div>
-      </div>
-  </div>
-</div>
-<!-- End Top-Navigation -->
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="realistic_human_heart.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+    <div class="nav">
+        <div class="inicio">
+            <div class="logo">
+                <p>Partes principales del corazón</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="fullheight align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-7 col-xs-12"> <!-- Cambia col-7 h-xs por col-7 col-xs-12 -->
+    <model-viewer src="realistic_human_heart.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+      <button class="Hotspot" slot="hotspot-1" data-position="0.1184063727920541m 0.5871095155249335m 0.07890122228189765m" data-normal="0.8070297709618932m 0.06130229651576868m 0.5873201658576754m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Aorta</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="0.20083663334366625m 0.40154133844839385m 0.2923421236895819m" data-normal="0.4650854892401917m 0.20924687021088095m 0.8601809315517069m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Tronco Pulmonar</div>
+      </button><button class="Hotspot" slot="hotspot-5" data-position="0.29741296266350015m 0.7116098006980409m -0.2997456391704544m" data-normal="0.5456724084461052m -0.5366246542079928m -0.6436424497784303m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Arteria Subclavia</div>
+      </button><button class="Hotspot" slot="hotspot-6" data-position="0.22224584512317186m 0.745977835824246m -0.16124623563855775m" data-normal="0.7707662697111615m -0.2733865504169079m -0.5754816691491439m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Arteria Carótida Común</div>
+      </button><button class="Hotspot" slot="hotspot-7" data-position="0.08874923099061563m 0.7762253881136993m -0.007663077953376472m" data-normal="0.727176833255406m 0.2856657346387135m 0.6241866237191916m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Tronco Branquiocefálico</div>
+      </button><button class="Hotspot" slot="hotspot-8" data-position="-0.3154452464304079m 0.7060285788476188m 0.2518486816429007m" data-normal="0.24721664576722385m -0.16782189915275222m 0.9543163732328849m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Vena Cava Superior</div>
+      </button><button class="Hotspot" slot="hotspot-9" data-position="-0.25785667416602986m 0.633812436769523m -0.11657910538337021m" data-normal="-0.49243730605734626m -0.1939483690404791m -0.8484630397074003m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Arteria Pulmonar Derecha</div>
+      </button><button class="Hotspot" slot="hotspot-10" data-position="-0.23906808277559483m -0.398926151781375m 0.38329263007848624m" data-normal="-0.335845679199496m -0.4057916197115883m 0.8500240238574878m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Ventrículo Derecho</div>
+      </button><button class="Hotspot" slot="hotspot-12" data-position="0.35560245574692917m -0.3258004322623329m 0.22431354645318624m" data-normal="0.8394508739025985m -0.1530074463246858m 0.5214508142417289m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Ventrículo Izquierdo</div>
+      </button><button class="Hotspot" slot="hotspot-13" data-position="0.5039124794075793m 0.3659279811368387m 0.10088836114954364m" data-normal="0.9895462826567343m -0.14418883380751796m -0.002781130249837559m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Arteria Pulmonar Izquierda</div>
+      </button>
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -58,14 +58,39 @@
       <div id="ar-prompt">
           <img src="ar_hand_prompt.png">
       </div>
-    </model-viewer>
-    <img src="qr.jpg" class="qr"> 
+    </model-viewer> 
+    <img src="qr.png">    
+</div>
+
+<div class="col-5 col-xs-12 align-items-center">
+    <div class="about-slogan">
+      <h4>Aorta</h4>
+          <p>Lleva la sangre oxigenada y rica en nutrientes desde el ventrículo izquierdo del corazón hacia todas las partes del organismo.<br>
+      <h4>Tronco Pulmonar</h4>
+          <p>Llevar la sangre desoxigenada desde el ventrículo derecho hacia los pulmones, donde se produce el intercambio gaseoso esencial para la oxigenación de la sangre.<br>
+      <h4>Arteria Subclavia</h4>
+          <p>Esta arteria es responsable de transportar sangre oxigenada desde la aorta hacia la extremidad superior del cuerpo, incluidos el hombro, el brazo y la mano.<br>
+          <p>A medida que la arteria subclavia se desplaza hacia arriba desde la aorta, suministra sangre a la región torácica superior y a los músculos y tejidos de los hombros.<br>
+          <p>Es esencial en la formación del arco arterial del sistema circulatorio, participando en la creación de un circuito vascular importante conocido como el círculo arterial del hombro.<br>
+      <h4>Arteria Carótida Común</h4>
+          <p>Se encuentra en el cuello y desempeña un papel fundamental en el suministro de sangre al cerebro, cabeza y cuello. </p>
+      <h4>Tronco Branquiocefálico</h4>
+          <p>Su función principal es suministrar sangre oxigenada a varias estructuras en la parte superior del cuerpo, incluyendo la cabeza, el cuello y los miembros superiores. </p>
+      <h4>Vena Cava Superior</h4>
+          <p>Lleva al corazón la sangre que ya ha circulado por el cuerpo (pobre en oxígeno)</p>
+      <h4>Arteria Pulmonar Derecha e Izquierda</h4>
+          <p>Lleva la sangre pobre en oxígeno a los pulmones</p>
+      <h4>Ventrículo Derecho</h4>
+          <p>Bombea la sangre desoxigenada hacia los pulmones a través de la arteria pulmonar, donde se produce el intercambio gaseoso y la sangre se oxigena.</p>
+      <h4>Ventrículo Izquierdo</h4>
+          <p>Bombea la sangre oxigenada a través de la arteria aorta hacia todo el cuerpo, suministrando oxígeno y nutrientes a los tejidos.</p>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
     <script src="script.js"></script>
-    <!--BACK TO MAIN BTN-->
-    <a href="/index.html">
-      <img src="/imagenes/back-img.png" class="back-button">
-    </a>
-    <!--END BACK TO MAIN BTN-->
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
   </body>
