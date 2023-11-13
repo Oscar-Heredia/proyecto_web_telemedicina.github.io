@@ -159,3 +159,9 @@ model-viewer {
 .primary-color{
   color: var(--primary-color);
 }
+
+
+.QR{
+  height: 200px;
+  weight: 200px;
+}

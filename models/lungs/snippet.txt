@@ -1,4 +1,17 @@
-<model-viewer src="realistic_human_lungs.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+<model-viewer src="realistic_human_lungs.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+    <button class="Hotspot" slot="hotspot-1" data-position="0.016004668467720518m 0.26732980287995994m -0.036781607649171426m" data-normal="0.10267530265162449m 0.8311815063349509m 0.5464385470957911m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Faringe</div>
+    </button><button class="Hotspot" slot="hotspot-2" data-position="0.0009185229439372718m 0.22109481240613418m -0.02627207597400503m" data-normal="-0.4169144846345015m -0.1098982062849049m 0.9022775054035808m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Laringe</div>
+    </button><button class="Hotspot" slot="hotspot-3" data-position="0.0008634581335733866m 0.17169511041948476m -0.03706129623744862m" data-normal="-0.14166777631529376m -0.1795020539162874m 0.9735035972166277m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Traquea</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="0.0807547098816991m 0.09199238218427144m -0.0012393751365602848m" data-normal="0.3513187650755863m 0.33197585210550057m 0.8754239880906804m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Pulmón Izquierdo</div>
+    </button><button class="Hotspot" slot="hotspot-5" data-position="-0.058725974675095646m 0.08528650040743903m 0.006305045713825389m" data-normal="-0.08201381522489327m 0.3087763181584435m 0.9475921693728652m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Pulmón Derecho</div>
+    </button><button class="Hotspot" slot="hotspot-6" data-position="0.04530906832898421m 0.08358366329957713m -0.06418091622064773m" data-normal="-0.8851479549344299m -0.3197754472649217m 0.3380188769904958m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Bronquios</div>
+    </button>
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
     </div>

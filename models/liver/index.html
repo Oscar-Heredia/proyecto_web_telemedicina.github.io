@@ -5,50 +5,41 @@
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
   </head>
   <body>
-<!-- Top-Navigation -->
-<div class="nav">
-  <div class="inicio">
-      <a href="/index.html#home">
-          <div class="logo">
-              Weroskis basati sull'esperienza interattiva
-          </div>
-      </a>
-      <div class="menu">
-          <a href="/index.html">
-              <div class="menu-item">
-                  Home
-              </div>
-          </a>
-          <a href="/index.html#about">
-              <div class="menu-item">
-                  About
-              </div>
-          </a>
-          <a href="/index.html#inicio-menu">
-              <div class="menu-item">
-                  Temas
-              </div>
-          </a>
-          <a href="/index.html#testimonials">
-              <div class="menu-item">
-                  Testimonials
-              </div>
-          </a>
-      </div>
-      <div class="right-menu">
-          <div class="cart-btn">
-              <i class='bx bxs-cart'></i>
-          </div>
-      </div>
-  </div>
-</div>
-<!-- End Top-Navigation -->
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="liver.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+    <div class="nav">
+        <div class="inicio">
+            <div class="logo">
+                <p>Partes principales del hígado</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="fullheight align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-7 col-xs-12"> <!-- Cambia col-7 h-xs por col-7 col-xs-12 -->
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="liver.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+      <button class="Hotspot" slot="hotspot-1" data-position="-21.29399087779447m -29.57829104567935m 2.7697090955467942m" data-normal="0.38789511970948276m 0.9024755872651662m 0.18728371657984458m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Cara Diafragmática del Lóbulo Derecho</div>
+      </button><button class="Hotspot" slot="hotspot-2" data-position="24.96141643703355m -51.478548107928155m -17.2028245877835m" data-normal="0.5595135463352957m 0.8202098350485674m -0.11916550657343288m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Cara Diafragmática del Lóbulo Izquierdo</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="-10.032156003251416m -68.80499299792308m 27.26706779134237m" data-normal="0.41600530549654835m -0.49280855948787655m 0.7642508158282906m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Vesícula Biliar</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="-12.304834372401864m -70.04564259014568m -30.81450738430901m" data-normal="-0.4785946968918419m -0.8273317048169464m -0.29405673995283776m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Vena Cava Inferior</div>
+      </button><button class="Hotspot" slot="hotspot-5" data-position="7.940957681592526m -41.93762856097371m -11.889714828037164m" data-normal="0.44089847708248303m 0.8969755486832502m 0.03230167133028039m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Ligamento Coronario</div>
+      </button>
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -59,13 +50,30 @@
           <img src="ar_hand_prompt.png">
       </div>
     </model-viewer>
-    <img src="qr.jpg" class="qr">   
+    <img src="qr.png">    
+  </div>  
+  <div class="col-5 col-xs-12 align-items-center">
+    <div class="about-slogan">
+      <h4>Cara Diafragmática del Lóbulo Derecho</h4>
+          <p>Es la porción del hígado que se encuentra en contacto con el diafragma, el músculo principal involucrado en la respiración.<br>
+            <p>Su función principal es proporcionar soporte estructural al hígado y mantener su posición en la cavidad abdominal.<br>
+            <p>Realiza también funciones vitales como el metabolimso de nutrientes, producción de bilis, desintoxicación, almacenamiento de vitaminas y minerales, entre otras cosas.<br>
+      <h4>Cara Diafragmática del Lóbulo Izquierdo</h4>
+          <p>Sirve de apoyo al Lóbulo Derecho para la realización de sus funciones.<br>
+      <h4>Vesícula Biliar</h4>
+          <p>Almacena y concentra la bilis, un líquido producido por el hígado que ayuda en la digestión de las grasas.<br>
+          <p>La bilis se libera de la vesícula biliar en respuesta a la ingestión de alimentos, especialmente aquellos que contienen grasas.<br>
+      <h4>Vena Cava Inferior</h4>
+          <p>La función de la vena cava inferior en relación con el hígado es transportar la sangre venosa desoxigenada desde la parte inferior del cuerpo, incluyendo las piernas y la región abdominal, hacia la aurícula derecha del corazón.</p>
+      <h4>Ligamento Coronario</h4>
+          <p>Su función principal es proporcionar soporte estructural y ayudar a fijar el hígado a las estructuras circundantes.</p>
+      </div>
+</div>
+</div>
+</div>
+</div>
+
     <script src="script.js"></script>
-    <!--BACK TO MAIN BTN-->
-    <a href="/index.html">
-      <img src="/imagenes/back-img.png" class="back-button">
-    </a>
-    <!--END BACK TO MAIN BTN-->
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
   </body>

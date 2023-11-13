@@ -1,4 +1,13 @@
-<model-viewer src="duodenum_pancreas_spleen.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+<model-viewer src="pancreas.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+    <button class="Hotspot" slot="hotspot-1" data-position="-0.4904968830484761m 1.3175581538811103m -2.734997059514563m" data-normal="-0.9305529579037136m -0.364359563781816m -0.03623949250989004m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Cabeza</div>
+    </button><button class="Hotspot" slot="hotspot-2" data-position="-0.5133336277908995m 1.1156137705916354m -0.04685440790436368m" data-normal="-0.9215319445044096m -0.38784897758664766m -0.018762884717285825m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Conducto Pancreático</div>
+    </button><button class="Hotspot" slot="hotspot-3" data-position="0.2708815123593793m 1.8966273651774506m -0.8113901432386353m" data-normal="0.6750754361724696m 0.28439298727964385m 0.6807303315283597m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Lóbulo</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="-0.6179650060452976m 1.7153732125635284m 2.249191925369162m" data-normal="-0.9745506915292059m -0.1983947498265087m -0.10435742849085286m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Cola</div>
+    </button>
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
     </div>

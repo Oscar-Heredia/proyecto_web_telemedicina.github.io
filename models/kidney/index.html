@@ -5,50 +5,38 @@
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
   </head>
   <body>
-<!-- Top-Navigation -->
-<div class="nav">
-  <div class="inicio">
-      <a href="/index.html#home">
-          <div class="logo">
-              Weroskis basati sull'esperienza interattiva
-          </div>
-      </a>
-      <div class="menu">
-          <a href="/index.html">
-              <div class="menu-item">
-                  Home
-              </div>
-          </a>
-          <a href="/index.html#about">
-              <div class="menu-item">
-                  About
-              </div>
-          </a>
-          <a href="/index.html#inicio-menu">
-              <div class="menu-item">
-                  Temas
-              </div>
-          </a>
-          <a href="/index.html#testimonials">
-              <div class="menu-item">
-                  Testimonials
-              </div>
-          </a>
-      </div>
-      <div class="right-menu">
-          <div class="cart-btn">
-              <i class='bx bxs-cart'></i>
-          </div>
-      </div>
-  </div>
-</div>
-<!-- End Top-Navigation -->
+        <!-- <model-viewer> HTML element -->
+            <div class="nav">
+                <div class="inicio">
+                    <div class="logo">
+                        <p>Partes principales del riñón</p>
+                    </div>
+                </div>
+            </div>
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="kidney.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+        <div class="fullheight align-items-center" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-7 col-xs-12"> <!-- Cambia col-7 h-xs por col-7 col-xs-12 -->
+    <model-viewer src="kidney.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+      <button class="Hotspot" slot="hotspot-1" data-position="1.866169165529159m -0.2334790870451145m 1.1447049018707203m" data-normal="0.873008466926129m 0.3485316396088321m -0.34114793399179355m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Arteria Renal</div>
+      </button><button class="Hotspot" slot="hotspot-2" data-position="1.611058671647284m -0.20716883633490746m 1.2333342142202572m" data-normal="-0.6474231624009298m -0.013129418017464402m 0.7620176291722535m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Vena Renal</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="0.2413658077884655m -1.2333286612008287m 0.9266943339211307m" data-normal="-0.15720851044052406m 0.09502290923210685m 0.9829832811223894m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Uréter</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="-1.176787816972738m 0.8306433313454094m 0.44253548034261436m" data-normal="-0.79672493329392m 0.2456356342780007m 0.5521707306989776m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Cápsula Renal</div>
+      </button>
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -59,13 +47,30 @@
           <img src="ar_hand_prompt.png">
       </div>
     </model-viewer>
-    <img src="qr.jpg" class="qr">  
+    <img src="qr.png"> 
+</div>
+<div class="col-5 col-xs-12 align-items-center">
+    <div class="about-slogan">
+      <h4>Arteria Renal</h4>
+          <p>Transporta sangre rica en oxígeno desde la aorta hasta los riñones.</br>
+            Dentro de los riñones, la arteria renal se ramifica en arteriolas más pequeñas y, finalmente, en capilares sanguíneos en unidades estructurales llamadas nefronas.<br>
+      <h4>Vena Renal</h4>
+          <p>Transporta la sangre filtrada y purificada desde el riñón de vuelta hacia la circulación general.</br>
+            Después de que la sangre ha pasado a través de las estructuras funcionales del riñón, como los glomérulos y los túbulos, se recoge en las venas renales para ser devuelta al torrente sanguíneo.<br>
+      <h4>Uréter</h4>
+          <p>Es un conducto muscular que conecta cada riñón con la vejiga urinaria.</br>
+            Su función principal es transportar la orina desde los riñones hasta la vejiga.<br>
+      <h4>Cápsula Renal</h4>
+          <p>La función principal de la cápsula renal es participar en el proceso de filtración glomerular, que es el primer paso en la formación de la orina.<br>
+            En este proceso, la sangre fluye a través del glomérulo, y parte de ella se filtra a la cápsula renal. <br>
+            Este filtrado inicial luego se modifica y se concentra a medida que pasa por los túbulos renales, y finalmente se excreta como orina.</p>
+        </div>
+</div>
+</div>
+</div>
+</div>
+
     <script src="script.js"></script>
-    <!--BACK TO MAIN BTN-->
-    <a href="/index.html">
-      <img src="/imagenes/back-img.png" class="back-button">
-    </a>
-    <!--END BACK TO MAIN BTN-->
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
   </body>
