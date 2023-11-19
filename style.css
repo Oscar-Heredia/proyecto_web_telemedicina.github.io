@@ -6,6 +6,74 @@
     --white: #ffffff;
 }
 
+/* Phones, 600px and down */
+@media only screen and (max-width: 600px) {
+    .col-xs-1,
+    .col-xs-2,
+    .col-xs-3,
+    .col-xs-4,
+    .col-xs-5,
+    .col-xs-6,
+    .col-xs-7,
+    .col-xs-8,
+    .col-xs-9,
+    .col-xs-10,
+    .col-xs-11,
+    .col-xs-12 {
+        width: 100%;
+    }
+
+    .slogan h1 {
+        font-size: 4rem;
+    }
+
+    .slogan button {
+        padding: 1rem 3rem;
+    }
+
+    .about-slogan {
+        padding: 2rem;
+    }
+
+    .inicio-menu {
+        padding: 2rem;
+    }
+
+    .tema-category button {
+        padding: 0.5rem 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    .tema-item {
+        width: 100%;
+    }
+
+    .review-wrap {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 2rem;
+    }
+
+    .input-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-group input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+
+
 *{
     font-family: 'Popins', sans-serif;
     margin: 0;
